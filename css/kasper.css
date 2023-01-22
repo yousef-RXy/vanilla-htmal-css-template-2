@@ -67,7 +67,7 @@ a{
     height: 2px;
     left: 50%;
     transform: translateX(-50%);
-    bottom: calc(-38px + 7px);
+    bottom: calc(-38px + 8.5px);
 }
 .main-heading p{
     width: 550px;
@@ -304,6 +304,61 @@ top: 1px;
 padding-top: var(--section-padding);
 padding-bottom: var(--section-padding);
 }
+.portfolio ul{
+    display: flex;
+    justify-content: center;
+}
+.portfolio ul .active{
+    background-color: var(--main-color);
+    color: white;
+}
+.portfolio ul li{
+    padding: 10px;
+}
+.portfolio .imgs-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+.portfolio .imgs-container .box{
+    flex-basis: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.portfolio .imgs-container .box img{
+    max-width: 100%;
+    transition: 0.3s;
+}
+.portfolio .imgs-container .box:hover img {
+    transform: rotate(3deg) scale(1.1);
+}
+.portfolio .imgs-container .box .caption {
+    position: absolute;
+    background-color: #ffffff;
+    bottom: -100%;
+    padding: 20px;
+    width: 100%;
+    transition: 0.3s;
+}
+.portfolio .imgs-container .box:hover .caption {
+    bottom: 0;
+}
+.portfolio .imgs-container .box .caption h4 {
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.portfolio .imgs-container .box .caption p {
+    color: var(--main-color);
+}
+.portfolio a{
+    background-color: var(--main-color);
+    padding: 15px 20px;
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    text-decoration: none;
+    text-transform: uppercase;
+}
 /* end portfolio */
 /* start mediaqurry */
 @media (max-width: 768px) {
@@ -347,7 +402,6 @@ padding-bottom: var(--section-padding);
         width: 100%;
         flex: auto;
     }
-
 }
 
 @media (min-width: 768px) {
@@ -366,11 +420,17 @@ padding-bottom: var(--section-padding);
         grid-column-gap: 40px;
         grid-row-gap: 60px;
     }
+    .portfolio .imgs-container .box{
+        flex-basis: 50%;
+    }
 }
 
 @media (min-width: 992px) {
     .container{
         width: 970px;
+    }
+    .portfolio .imgs-container .box{
+        flex-basis: 25%;
     }
 }
 
