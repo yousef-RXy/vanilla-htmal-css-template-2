@@ -32,6 +32,51 @@ a{
 }
 /* end global rules */
 /* Start Components */
+.main-heading{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.main-heading h2{
+    font-weight: normal;
+    font-size: 40px;
+    position: relative;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+}
+.main-heading h2::after{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid #333;
+    height: 14px;
+    width: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -38px;
+    background-color: white;
+}
+.main-heading h2::before{
+    content: "";
+    position: absolute;
+    background-color: #777;
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: calc(-38px + 7px);
+}
+.main-heading p{
+    width: 550px;
+    margin: 0 auto 100px;
+    max-width: 100%;
+    line-height: 2;
+    color: #777;
+
+}
 /* end Components */
 /* start header */
 header{
@@ -179,6 +224,87 @@ header .container nav .fa-bars{
     margin: 0  10px;
 }
 /* end landing */
+/* start servises */
+.services {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.services .srv-box i {
+    margin-right: 50px;
+}
+.services .srv-box{
+    display: flex;
+}
+.services .srv-box h3 {
+    margin-bottom: 30px;
+    color: var(--main-color);
+}
+.services .srv-box p {
+    line-height: 2;
+    color: #777;
+}
+/* end servises */
+/* start design */
+.design{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    height: 600px;
+    position: relative;
+    background-image: url(../media/design-features.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.design::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(0 0 0 / 60%);
+    top: 0;
+    right: 0;
+}
+.design .image,
+.design .text {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+}
+.design .image {
+    text-align: center;
+}
+.design .image img {
+    position: relative;
+    bottom: -150px;
+}
+.design .text {
+    color: white;
+    padding: 50px;
+    background-color: var(--transparent-color);
+}
+.design .text ul li::before {
+font-family: "Font Awesome 5 Free";
+content: "\f108";
+font-weight: 900;
+margin-right: 20px;
+position: relative;
+top: 1px;
+}
+.design .text h2{
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+.design .text ul li{
+    padding: 15px 0;
+}
+/* end design */
+/* start portfolio */
+.portfolio{
+padding-top: var(--section-padding);
+padding-bottom: var(--section-padding);
+}
+/* end portfolio */
 /* start mediaqurry */
 @media (max-width: 768px) {
     header .container nav ul{
@@ -205,6 +331,23 @@ header .container nav .fa-bars{
     .landing .text{
         width: 100%;
     }
+    .services .srv-box {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .services .srv-box i {
+        margin: 0 0 30px;
+    }
+    .design img {
+        display: none;
+    }
+    .design .text {
+        width: 100%;
+        flex: auto;
+    }
+
 }
 
 @media (min-width: 768px) {
@@ -216,6 +359,12 @@ header .container nav .fa-bars{
     }
     header .container nav ul{
         display: flex;
+    }
+    .services .services-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(450px,1fr));
+        grid-column-gap: 40px;
+        grid-row-gap: 60px;
     }
 }
 
