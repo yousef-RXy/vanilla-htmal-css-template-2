@@ -360,6 +360,62 @@ padding-bottom: var(--section-padding);
     text-transform: uppercase;
 }
 /* end portfolio */
+/* start video */
+.video{
+    position: relative;
+}
+.video::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 40%);
+}
+.video video{
+    width: 100%;
+}
+.video .text{
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+    background-color: var(--transparent-color);
+    z-index: 2;
+    color: #ffffff;
+}
+.video .text h2{
+    font-weight: normal;
+    padding-bottom: 30px;
+    text-transform: uppercase;
+}
+.video .text p{
+    padding-bottom: 30px;
+}
+.video .text button{
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    text-transform: uppercase;
+}
+/* end video */
+/* start About */
+.about{
+    padding-top: var(--section-padding);
+    overflow: hidden;
+    text-align: center;
+}
+.about img{
+    position: relative;
+    bottom: -120px;
+    margin-top: -120px;
+    max-width: 100%;
+}
+/* end About */
 /* start mediaqurry */
 @media (max-width: 768px) {
     header .container nav ul{
@@ -401,6 +457,10 @@ padding-bottom: var(--section-padding);
     .design .text {
         width: 100%;
         flex: auto;
+    }
+    .about img{
+        bottom: -60px;
+        margin-top: -60px;
     }
 }
 
