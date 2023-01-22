@@ -123,14 +123,60 @@ header .container nav .fa-bars{
     height: 100%;
     background-color: rgb(0 0 0 / 60%);
 }
-.landing .fa-angle-left{
-    left: 0;
+.landing .text{
+    width: 50%;
+    background-color: var(--transparent-color);
+    padding: 50px;
     position: absolute;
-
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.landing .text .content{
+    flex-direction: column;
+    max-width: 500px;
+}
+.landing .text .content h2 {
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.landing .text .content p {
+    font-size: 14px;
+    line-height: 2;
+}
+.landing .fa-angle-left{
+    left: 30px;
 }
 .landing .fa-angle-right{
-    right: 0;
+    right: 30px;
+}
+.landing .fa-angle-right, .landing .fa-angle-left{
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ddd;
+}
+.landing .bullets{
+    display: flex;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    bottom: 30px;
+}
+.landing .bullets li{
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+.landing .bullets li.active{
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+    margin: 0  10px;
 }
 /* end landing */
 /* start mediaqurry */
@@ -152,6 +198,12 @@ header .container nav .fa-bars{
     }
     header .container nav .fa-bars{
         display: block;
+    }
+    .landing .change-background {
+        display: none;
+    }
+    .landing .text{
+        width: 100%;
     }
 }
 
