@@ -16,7 +16,7 @@
     <title>vanilla htmal css template 2</title>
   </head>
 <body>
-  <!-- make a button  by positin fixed to goto the top of the page #header-->
+  <a href="#"><i class="fa-solid fa-angles-up"></i></a>
   <!-- start header -->
   <header id="header">
     <div class="container">
@@ -29,9 +29,9 @@
           <li class="active"><a href="#header">Home</a></li>
           <li><a href="#Services">Services</a></li>
           <li><a href="#Portfolio">Portfolio</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#Pricing">Pricing</a></li>
+          <li><a href="#Contact">Contact</a></li>
         </ul>
         <div class="form">
           <i class="fas fa-search"></i>
@@ -218,7 +218,7 @@
   </div>
   <!-- end video -->
   <!-- start About -->
-  <div class="about">
+  <div id="About" class="about">
     <div class="container">
         <div class="main-heading">
           <h2>about us</h2>
@@ -331,7 +331,7 @@
   </div>
   <!-- end Quote -->
   <!-- start pricing -->
-  <div class="pricing">
+  <div id="Pricing" class="pricing">
     <div class="container">
       <div class="main-heading">
         <h2>pricing</h2>
@@ -399,5 +399,58 @@
     </div>
   </div>
   <!-- end pricing -->
+  <!-- start subscribe -->
+  <div class="subscribe">
+    <div class="container">
+      <form action="">
+        <i class="far fa-envelope fa-lg"></i>
+        <input type="email" name="email" placeholder="Your Email">
+        <input type="submit" value="SUBSCRIBE">
+      </form>
+      <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blan dit aliquet elit, eget tincidunt.</p>
+    </div>
+  </div>
+  <!-- end subscribe -->
+  <!-- start contact -->
+  <div id="Contact" class="contact-us">
+    <div class="container">
+      <div class="main-heading">
+        <h2>contact us</h2>
+        <p>
+          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget
+          tincidunt.
+        </p>
+      </div>
+      <div class="content">
+        <form action="">
+          <input class="main-input" type="text" name="name" placeholder="Your Name">
+          <input class="main-input" type="email" name="mail" placeholder="Your Email">
+          <textarea class="main-input" name="message" placeholder="Your Message"></textarea>
+          <input type="submit" value="Send Message">
+        </form>
+        <div class="info">
+          <h4>Get In Touch</h4>
+            <span class="phone">+00 123.456.789</span>
+            <span class="phone">+00 123.456.789</span>
+            <h4>Where We Are</h4>
+            <address>Awesome Address 17<br>New York, NYC<br>123-4567-890<br>USA</address>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end contact -->
+  <!-- start footer -->
+  <footer>
+    <img src="media/logo.png" alt="">
+    <P>we are social</P>
+    <ul>
+      <li><i class="fab fa-facebook-f"></i></li>
+      <li><i class="fab fa-twitter"></i></li>
+      <li><i class="fas fa-home"></i></li>
+      <li><i class="fab fa-linkedin"></i></li>
+    </ul>
+    <p>© 2021 <span>Kasper</span> All Right Reserved</p>
+  </footer>
+  <!-- end footer -->
 </body>
 </html>
