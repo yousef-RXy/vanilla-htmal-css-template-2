@@ -1,1 +1,2 @@
 # [vanilla-htmal-css-template-2](https://yousef-rxy.github.io/vanilla-htmal-css-template-2/)
+The "Kasper Template" is a website designed for web designers and developers to showcase their services and portfolios. The primary objective of this project is to create a modern and fully responsive website that effectively communicates the services offered by the enterprise. The site should cater to both desktop and mobile users, providing an optimal user experience on all devices.
